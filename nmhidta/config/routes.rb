@@ -1,4 +1,8 @@
 Nmhidta::Application.routes.draw do
+  get "login/user:string"
+
+  get "login/password:string"
+
   get "home/index"
 
   resources :databases
