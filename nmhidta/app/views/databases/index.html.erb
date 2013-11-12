@@ -30,34 +30,30 @@
     <th></th>
   </tr>
 
-<% @databases.each do |database| %>
+<%  @databases.each do |database|  %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td><%= database.last_name %></td>
-    <td><%= database.first_name %></td>
-    <td><%= database.dob %></td>
-    <td><%= database.address %></td>
-    <td><%= database.ssn %></td>
-    <td><%= database.fbin %></td>
-    
-    <td>
-<%= image_tag(database.picture, :class => 'list_image') %>
-</td>
-    
-    <td><%= database.other1 %></td>
-    <td><%= database.make %></td>
-    <td><%= database.model %></td>
-    <td><%= database.year %></td>
-    <td><%= database.owner %></td>
-    <td><%= database.registration %></td>
-    <td><%= database.other2 %></td>
-    <td><%= database.city %></td>
-    <td><%= database.state %></td>
-    <td><%= database.road %></td>
-    <td><%= database.mile_marker %></td>
-    <td><%= database.origin %></td>
-    <td><%= database.destination %></td>
-    <td><%= database.other3 %></td>
-    <td><%= database.other4 %></td>
+    <td><%= link_to database.last_name, database  %></td>
+    <td><%= link_to database.first_name, database %></td>
+    <td><%= link_to database.dob, database %></td>
+    <td><%= link_to database.address, database %></td>
+    <td><%= link_to database.ssn, database %></td>
+    <td><%= link_to database.fbin, database %></td>
+    <td><%= link_to image_tag(database.picture, :class => 'list_image'), database %></td>
+    <td><%= link_to database.other1, database %></td>
+    <td><%= link_to database.make, database %></td>
+    <td><%= link_to database.model, database %></td>
+    <td><%= link_to database.year, database %></td>
+    <td><%= link_to database.owner, database %></td>
+    <td><%= link_to database.registration, database %></td>
+    <td><%= link_to database.other2, database %></td>
+    <td><%= link_to database.city, database %></td>
+    <td><%= link_to database.state, database %></td>
+    <td><%= link_to database.road, database %></td>
+    <td><%= link_to database.mile_marker, database %></td>
+    <td><%= link_to database.origin, database %></td>
+    <td><%= link_to database.destination, database %></td>
+    <td><%= link_to database.other3, database %></td>
+    <td><%= link_to database.other4, database %></td>
     <td><%= link_to 'Show', database %></td>
     <td><%= link_to 'Edit', edit_database_path(database) %></td>
     <td><%= button_to 'Remove', database, method: :delete, data: { confirm: 'Want to remove from database?' } %></td>

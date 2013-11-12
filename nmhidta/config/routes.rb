@@ -15,15 +15,15 @@ get "homepage" => "home#index", :as => "homepage"
 
 get "pages/about" , :as => 'about'
 get "pages/help", :as => 'help'
-get "faqs", :as => 'faqs'
+get "pages/faqs", :as => 'faqs'
 get "pages/resources", :as => 'resources'
 get "pages/blog_post", :as => 'blog'
-get "pages/contact", :as => 'contact'
-get "pages/about1", :as => 'about1'
+get "pages/new_form", :as => 'new_form'
+get "pages/search", :as => 'search'
 get "pages/index", :as => 'index'
 
 #root :to => 'home#index', :as => 'home'
-root :to => "pages#index"
+root :to => "sessions#new"
 resources :users
 resources :sessions
 resources :pages
