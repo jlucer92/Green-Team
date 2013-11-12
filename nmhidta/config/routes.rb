@@ -15,7 +15,7 @@ get "homepage" => "home#index", :as => "homepage"
 
 get "pages/about" , :as => 'about'
 get "pages/help", :as => 'help'
-get "pages/faqs", :as => 'faqs'
+get "faqs", :as => 'faqs'
 get "pages/resources", :as => 'resources'
 get "pages/blog_post", :as => 'blog'
 get "pages/contact", :as => 'contact'
@@ -23,7 +23,7 @@ get "pages/about1", :as => 'about1'
 get "pages/index", :as => 'index'
 
 #root :to => 'home#index', :as => 'home'
-root :to => "sessions#new"
+root :to => "pages#index"
 resources :users
 resources :sessions
 resources :pages
